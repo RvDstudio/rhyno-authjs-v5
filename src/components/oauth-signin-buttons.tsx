@@ -80,11 +80,6 @@ export const OAuthSigninButtonsSkeleton = ({
         <SiGoogle color={SiGoogleHex} className="mr-2" />
         {text} with Google
       </Button>
-
-      <Button variant="secondary" className="mt-2 w-full">
-        <SiGithub color={SiGithubHex} className="mr-2" />
-        {text} with Github
-      </Button>
     </div>
   );
 };

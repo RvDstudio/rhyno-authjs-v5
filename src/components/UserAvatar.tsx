@@ -13,10 +13,15 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { CreditCard, LogOut, Settings, User } from "lucide-react";
-import { signOut } from "next-auth/react";
+
 import Link from "next/link";
+import { signoutUserAction } from "@/actions/signout-user-action";
 
 export default function UserAvatar({ session }: { session: Session | null }) {
+  const clickHandler = async () => {
+    await signoutUserAction();
+    window.location.href = "/";
+  };
   return (
     <div>
       <DropdownMenu>
@@ -56,7 +61,7 @@ export default function UserAvatar({ session }: { session: Session | null }) {
           <DropdownMenuSeparator />
           <DropdownMenuItem className="cursor-pointer">
             <LogOut className="mr-2 h-4 w-4" />
-            <button onClick={() => signOut()}>Sign Out</button>
+            <button onClick={clickHandler}>Sign Out</button>
             <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuContent>

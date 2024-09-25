@@ -68,7 +68,7 @@ export const ForgotPasswordForm = () => {
     <Dialog>
       Forgot your password? Click{" "}
       <DialogTrigger asChild>
-        <Button variant="link" size="sm" className="px-0">
+        <Button variant="link" size="sm" className="px-0 underline">
           here
         </Button>
       </DialogTrigger>

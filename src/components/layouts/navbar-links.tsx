@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { SignoutButton } from "@/components/signout-button";
 import { useSession } from "next-auth/react"; // No need to import Session here as a value
 import { Loader2Icon } from "lucide-react";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "@/components/UserAvatar";
 import { Session } from "next-auth"; // Import Session only as a type
 
 export const NavbarLinks = () => {

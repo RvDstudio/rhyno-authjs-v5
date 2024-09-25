@@ -1,90 +1,24 @@
 export default function HomePage() {
   return (
-    <main className="mt-4">
-      <div className="container">
-        <h1 className="text-3xl font-bold tracking-tight">Welcome</h1>
-
-        <div className="my-2 h-1 bg-muted" />
-        <h2 className="text-2xl font-bold tracking-tight">Features</h2>
-
-        <ul className="mt-4 grid grid-cols-2 gap-2">
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            User in Client Components
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            User in Server Components
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Credentials Provider
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Protect Pages
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Signout
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Google OAuth Provider
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Github OAuth Provider
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Auth.js Drizzle Adapter
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Extend Session Information
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Auth.js Extend Types
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Auth.js Session Events
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Update Session (Client)
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Auth.js Session Callbacks
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Custom errors
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Account Linking
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Middleware
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            User Roles
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Admin Dashboard
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Email Verification
-          </li>
-          <li className="line-clamp-1 break-all p-2 shadow hover:bg-muted">
-            Password Reset
-          </li>
-        </ul>
-
-        <div className="my-2 h-1 bg-muted" />
-        <h2 className="text-2xl font-bold tracking-tight">Created With</h2>
-
-        <ul className="mt-4 grid grid-cols-4 gap-2">
-          <li className="p-2 shadow hover:bg-muted">Next.js</li>
-          <li className="p-2 shadow hover:bg-muted">Tailwind</li>
-          <li className="p-2 shadow hover:bg-muted">shadcn/ui</li>
-          <li className="p-2 shadow hover:bg-muted">Auth.js</li>
-          <li className="p-2 shadow hover:bg-muted">Drizzle ORM</li>
-          <li className="p-2 shadow hover:bg-muted">NeonDB</li>
-          <li className="p-2 shadow hover:bg-muted">PostgreSQL</li>
-          <li className="p-2 shadow hover:bg-muted">Valibot</li>
-          <li className="p-2 shadow hover:bg-muted">TypeScript</li>
-        </ul>
+    <div className="mx-auto max-w-[900px] px-4 h-screen flex items-center justify-center sm:px-8 xl:px-0 relative z-1">
+      <div className="text-center">
+        <a href="/#" className="hero-subtitle-gradient hover:hero-subtitle-hover relative mb-5 font-medium text-sm inline-flex items-center gap-2 py-3 px-4.5 rounded-full">
+          <img src="../../images/icon-title.svg" alt="icon" className="pl-4" />
+          <span className="hero-subtitle-text hero-subtitle-gradient pr-4">
+            Your Ultimate Creative Companion!
+          </span>
+        </a>
+        <h1 className="text-white mb-6 text-3xl font-extrabold sm:text-5xl xl:text-heading-1">
+          Elevate Your Content with Our AI-Powered Writing Tool
+        </h1>
+        <p className="max-w-[500px] mx-auto mb-9 font-medium md:text-lg text-[#918EA0]">
+          Highly customizable Tailwind CSS template for AI - Tool, Startup, Software, App and Product Sites. Comes
+          with everything you need - pages, features, sections, components and more that you can easily customize.
+        </p>
+        <a href="/auth/signin" className="hero-button-gradient inline-flex rounded-lg py-3 px-7 text-white font-medium ease-in duration-300 hover:opacity-80">
+          Start Your Free Trial
+        </a>
       </div>
-    </main>
+    </div>
   );
 }
