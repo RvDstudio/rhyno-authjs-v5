@@ -9,7 +9,7 @@ export default function HomePage() {
           </span>
         </a>
         <h1 className="text-white mb-6 text-3xl font-extrabold sm:text-5xl xl:text-heading-1">
-          Elevate Your Content with Our AI-Powered Writing Tool
+          Elevate Your Content with Our AI-Powered Stock Management Tool
         </h1>
         <p className="max-w-[500px] mx-auto mb-9 font-medium md:text-lg text-[#918EA0]">
           Highly customizable Tailwind CSS template for AI - Tool, Startup, Software, App and Product Sites. Comes
