@@ -6,6 +6,7 @@ export default function page() {
       <div className="mb-10 rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-[#2e2e2e] dark:bg-[#252525]">
         <h2 className="mb-2 text-2xl">Erf1 bestellingen Pagina</h2>
         <p>
+          
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
           error modi aperiam iste nemo facilis tempore illo placeat quibusdam
           adipisci iusto nisi, hic deleniti molestias enim beatae dicta

@@ -10,7 +10,7 @@ export const SignoutButton = () => {
   };
 
   return (
-    <Button variant="destructive" size="sm" onClick={clickHandler}>
+    <Button  size="sm" onClick={clickHandler} className="mt-6 bg-[#00cbfe]">
       Sign Out
     </Button>
   );

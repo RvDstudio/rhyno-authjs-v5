@@ -30,5 +30,5 @@ export async function changeUserRoleAction(
     .set({ role: newRole })
     .where(eq(users.id, existingUser.id));
 
-  revalidatePath("/profile/admin-panel");
+  revalidatePath("/dashboard/profile/admin-panel");
 }

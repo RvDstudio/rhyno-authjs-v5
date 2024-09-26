@@ -7,6 +7,7 @@ declare module "next-auth" {
     role: (typeof users.$inferSelect)["role"];
     emailVerified: (typeof users.$inferSelect)["emailVerified"];
     isAdmin?: number; 
+    
   }
 }
 

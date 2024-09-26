@@ -1,5 +1,4 @@
-"use client";
-import type { Session } from "next-auth";
+import { auth } from "../auth"
 import React from "react";
 import {
   DropdownMenu,
@@ -12,16 +11,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { CreditCard, LogOut, Settings, User } from "lucide-react";
+import { CreditCard, LogOut, Settings, User, Shield } from "lucide-react";
 
 import Link from "next/link";
-import { signoutUserAction } from "@/actions/signout-user-action";
+import SignOutBtn from "./SignOutBtn";
 
-export default function UserAvatar({ session }: { session: Session | null }) {
-  const clickHandler = async () => {
-    await signoutUserAction();
-    window.location.href = "/";
-  };
+
+export default async function UserAvatar() {
+  const session = await auth()
+  const isAdmin = session?.user?.role === "admin"; // Assuming you have role in the session object
+  
+ 
+  if (!session?.user) return null
+
   return (
     <div>
       <DropdownMenu>
@@ -57,11 +59,21 @@ export default function UserAvatar({ session }: { session: Session | null }) {
               <span>Settings</span>
               <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
             </DropdownMenuItem>
+
+            {isAdmin && (
+               <DropdownMenuItem className="cursor-pointer">
+               <Link href="/dashboard/admin-panel" className="flex">
+                 <Shield className="mr-2 h-4 w-4" />
+                 <span>Admin</span>
+               </Link>
+               <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+             </DropdownMenuItem>
+            )}
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuItem className="cursor-pointer">
             <LogOut className="mr-2 h-4 w-4" />
-            <button onClick={clickHandler}>Sign Out</button>
+            <SignOutBtn />
             <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuContent>

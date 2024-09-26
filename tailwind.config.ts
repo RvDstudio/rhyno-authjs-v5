@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        landing: "url('/images/blur-01.svg')",
+        landing: "url('/images/bg.png')",
       },
       colors: {
         border: "hsl(var(--border))",
