@@ -41,16 +41,20 @@ export default async function Page() {
         </BreadcrumbList>
       </Breadcrumb>
       <div className="mb-10 rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-[#2e2e2e] dark:bg-[#252525]">
-        <div className="my-4 h-1 bg-muted" />
-        <h2 className="text-2xl font-bold tracking-tight">All Users</h2>
+        <h2 className="text-xl text-[#888888] tracking-tight">All Users</h2>
 
-        <div className="mt-16 grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-0 grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {users.map((user) => (
             <Card key={user.id} className="overflow-hidden">
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
-                  {user.name}
-                </CardTitle>
+            <CardHeader className="flex flex-col items-center justify-between space-y-0 pb-2">
+              <div className="relative mb-4">
+                <Avatar className="h-24 w-24">
+                  <AvatarImage src={user.image} alt={user.name} />
+                  <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
+                </Avatar>
+                <span className="absolute top-0 right-0 block h-3 w-3 rounded-full bg-green-500 ring-2 ring-white" />
+              </div>
+              <div className="absolute top-2 right-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -65,22 +69,14 @@ export default async function Page() {
                   <circle cx="19" cy="12" r="1" />
                   <circle cx="5" cy="12" r="1" />
                 </svg>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center space-x-4">
-                <Avatar className="h-20 w-20">
-  <AvatarImage src={user.image ?? undefined} alt={user.name ?? "User"} />
-  <AvatarFallback>{user.name?.charAt(0) ?? "N/A"}</AvatarFallback>
-</Avatar>
-                  <div className="space-y-2">
-                    <p className="text-sm text-muted-foreground">
-                      {user.email}
-                    </p>
-                    <p className="text-xs text-muted-foreground">{user.role}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </CardHeader>
+            <CardContent className="text-center">
+              <CardTitle className="text-sm font-medium mb-1">{user.name}</CardTitle>
+              <p className="text-xs text-muted-foreground mb-2">{user.email}</p>
+              <p className="text-xs text-muted-foreground uppercase">{user.role}</p>
+            </CardContent>
+          </Card>
           ))}
         </div>
       </div>

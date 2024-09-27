@@ -10,7 +10,7 @@ export const SignedIn = ({ session }: { session: Session }) => {
     <>
       <li>
         <Button size="sm" asChild>
-          <Link href="/profile">Profile</Link>
+          <Link href="/dashboard/profile">Profile</Link>
         </Button>
       </li>
       <UserAvatar session={session} /> {/* Use session here */}
